@@ -278,16 +278,7 @@ Generic layout (demo looks)
 *::after {
   box-sizing: border-box;
 }
-
-/* body {
-  margin: 0;
-  padding: 48px 0;
-  font-family: "Figtree", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  background-color: #faf5ff;
-  min-height: 100vh;
-} */
+ 
 .article-title{
   text-align: center;
   /* font-family: "Bebas Neue", cursive; */
@@ -297,6 +288,7 @@ Generic layout (demo looks)
   padding: 20px;
 }
 
+/* Base styles for articles */
 .articles {
   background-color: #faf5ff;
   display: grid;
@@ -307,16 +299,7 @@ Generic layout (demo looks)
   gap: 2rem;
 }
 
-/* 
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
-} */
+ 
 /* ----------------------------------------------------- */
 @media (width < 750px) {
 
@@ -358,11 +341,34 @@ Generic layout (demo looks)
     margin: auto;
   }
   .articles {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: 1fr; /* Single column for smaller devices */
+  }
+
+ article {
+    width: auto; /* Reset width for responsiveness */
+  } 
+}
+
+@media (width < 1000px){
+  .articles {
+    grid-template-columns: 1fr; /* Single column for smaller devices */
+ 
+    /* margin: 0 auto;
+    margin-left: auto;
+    margin-right:auto; */
+
+  }
+  
+  article {
+    width: auto; /* Ensure articles adjust dynamically */
   }
 }
 @media (max-width: 480px) {
   .articles {
-    grid-template-columns: 1fr; /* Single column on phone screens */
+    grid-template-columns: 1fr; /* Single column on small phones */
+  }
+
+  article {
+    width: auto; /* Ensure articles adjust dynamically */
   }
 }
