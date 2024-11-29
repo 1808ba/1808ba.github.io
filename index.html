@@ -8,9 +8,58 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css" />
+    
     <title>Portfolio : Aziza Ben douma</title>
+     
+    
   </head>
+  <style>
+.contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+
+  </style>
   <body>
     <nav>
       <div class="nav__content">
@@ -19,86 +68,298 @@
           <i class="ri-menu-line"></i>
         </label>
         <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">CV</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="ul-nav">
+          <li><a href="#" onclick="closeNav()">Home</a></li>
+          <li><a href="#about-me" onclick="closeNav()">About</a></li>
+          <li><a href="#" onclick="closeNav()">CV</a></li>
+          <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+          <li><a href="#contact" onclick="closeNav()">Contact</a></li>
         </ul>
       </div>
     </nav>
+    
     <section class="section">
       <div class="section__container">
         <div class="content">
           <p class="subtitle">HELLO</p>
           <h1 class="title">
-            I'm <span>Aziza Ben douma<br />a</span> Web Developer
+            Je m'appelle <span>Aziza Ben Douma</span>, Développeuse Full Stack 
           </h1>
           <p class="description">
-            Welcome to my web developer portfolio! I'm Aziza Ben douma, a skilled and
-            creative web developer with a passion for creating beautiful,
-            responsive, and user-friendly websites. 
+            Bienvenue sur mon portfolio ! Je suis Aziza Ben Douma, 
+            développeuse Full Stack compétente et créative, passionnée 
+            par la création de sites web beaux, réactifs et conviviaux.
           </p>
+          
           <div class="action__btns">
             <button class="hire__me">
-              <a href="assets/CV.pdf" download="Aziza_CV">Download CV</a>
+  
+              <a href="assets/CV.pdf" download="Aziza_CV" style="text-decoration: none;color: #fff;">Télécharger le CV</a>
             </button>          </div>
         </div>
         <div class="image">
-          <img src="assets/logo4.png" alt="profile" />
+          <img src="assets/profile2.jpg" alt="profile" />
         </div>
       </div>
     </section>
 
+<!-- ----------------------------------skills--------------------------- -->
 
-    <h1 class="article-title">Projects</h1>
+<div class="about-col-2"  id="about-me">
+  <br>
+<br>
+<br>
+  <div class="about-col-2">
+<p><b>À propos de moi</b><br><br>
 
-      <section class="articles">
+  Je suis Développeuse Full Stack diplômée d'une Licence en Génie Informatique,
+  passionnée par la création d'applications web dynamiques et performantes.
+   Mon expertise inclut la gestion de projets, le développement frontend et backend, 
+   ainsi que la mise en place de solutions innovantes.
+    Toujours curieuse et motivée par des nouveaux défis,
+     je cherche à collaborer sur des projets stimulants
+      où je peux mettre à profit mes compétences techniques et contribuer à 
+      l'innovation numérique.</p>
+  </div><br>
+  <div class="tab-titles">
+    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+    <p class="tab-links active-link" onclick="opentab('experience')">Soft Skills</p>
+    <p class="tab-links" onclick="opentab('education')">Education</p>
+  </div>
+  <div class="tab-contents" id="skills">
+    <ul>
+         <li><span>Langages de Programmation :</span> HTML, CSS, JavaScript, PHP.</li>
 
-        <article>
+      <li><span>Frameworks :</span> Laravel, Vue.js, Bootstrap, Tailwind.</li>
+      <li><span>Conception :</span> Merise, UML.</li>
+      <li><span>Base de Données :</span> MySQL, PostgreSQL.</li>
+      <li><span>UI/UX :</span> Figma.</li>
+       <li><span>GIT/GITHUB :</span> Git, GitHub.</li>  
+    </ul>
+  </div>
+  <div class="tab-contents active-tab" id="experience">
+    <ul>
+      <li><span>Esprit d'équipe.</span> </li>
+      <li><span>Autonomie et Rigueur.</span></li>
+      <li><span>Adaptation.</span></li>
+      <li><span>Gestion du temps.</span></li>
+      <li><span>Communication.</span></li>
+    </ul>
+  </div>
+  <div class="tab-contents" id="education">
+    <ul>
+      <li><span>Développeuse Full Stack {Laravel/Vue.Js} :</span> Simplon Maghreb x Talent4Startup, Casablanca, Morocco.</li>
+      <li><span>Licence Sciences et Techniques en Génie Informatique :</span> Faculté des Sciences et Techniques, Tanger.</li>
+      <li><span>Deust en Mathématiques, Informatique, Physique et Chimie :</span> Faculté des Sciences et Techniques, Tanger.</li>
+      <li><span>Baccalauréat en Sciences Physiques et Chimie :</span> Lycée Abd Ellah Chefchaouni, Tanger.</li>
+          </ul>
+  </div>
+</div>
 
-          <div class="article-wrapper">
-            <figure>
-              <img src="assets/projectsPics/weatherAppFullScreen.png" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>Weather App</h2>
-              <p>
 
-                A website that retrieves weather data from a chosen API and displays it on graphs using Chart.js for data visualization.              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg> -->
-              </a>
-            </div>
-          </div>
-        </article>
+
+
+<!-- --------------------------------------Projects----------------------------- -->
+<h1 class="article-title">Projects</h1>
+
+<section class="articles"  id="projects">
+ 
+  
+  <!-- Weather App -->
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="assets/projectsPics/weatherAppFullScreen.webp" alt="Weather App Screenshot" />
+      </figure>
+      <div class="article-body">
+        <h2>Weather App</h2>
+        <p>
+          Le projet consiste à développer un site web qui récupère 
+          les données météo depuis une API au choix et les affiche 
+          sous forme de graphiques en utilisant une librairie JavaScript de visualisation de données.
+        </p>
+        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalWeather">
+          Read more
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Find Coder -->
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="assets/projectsPics/emplvue.png" alt="Find Coder Screenshot" />
+      </figure>
+      <div class="article-body">
+        <h2>FindCoder</h2>
+        <p>
+          FindCoder, une plateforme dédiée à la mise en relation entre les employeurs et les développeurs.
+         Les développeurs peuvent créer un profil complet, ajoutant
+          leurs compétences, CV, LinkedIn, GitHub et portfolio.
+           Les employeurs peuvent parcourir ces profils, ...
+            <!-- rechercher des talents et communiquer via un système de messagerie intégré.
+        L'objectif est de simplifier le processus de recrutement pour les développeurs
+         en facilitant la découverte des talents et en établissant des connexions directes. -->
+        </p>
+        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalPf">
+          Read more
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Art Portfolio -->
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="assets/projectsPics/artport.png" alt="Art Portfolio Screenshot" />
+      </figure>
+      <div class="article-body">
+        <h2>Art Portfolio</h2>
+        <p>
+          ArtPort est une plateforme en ligne permettant aux artistes
+           de publier leurs œuvres. Les visiteurs peuvent les consulter
+            et laisser des commentaires. L’application utilise Vue.js pour 
+            l'interface et Laravel pour la gestion du back-end.
+        </p>
+        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalArt">
+          Read more
+        </button>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<!-- --------------------------------------------------- Modal WEATHER APP -------------------------------------------------->
+<div class="modal fade" id="exampleModalWeather" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Weather App</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/projectsPics/weatherAppFullScreen.webp" alt="Weather App Full Screen" style="width: 100%;" />
+        <b>Présentation du projet :</b> <br>
+        Le projet consiste à développer un site web qui récupère 
+        les données météo depuis une API au choix et les affiche 
+        sous forme de graphiques en utilisant une librairie JavaScript de visualisation de données.
+                <h3 class="outils">Outils</h3>
+                <p><b>HTML</b> : Markup language for structuring the web content.</p>
+                <p><b>CSS</b> : Styling language for designing the look and feel of the website.</p>
+                <p><b>JavaScript</b> : Scripting language for creating dynamic and interactive elements.</p>
+                <p><b>Chart.js</b> : JavaScript library for creating interactive and animated charts.</p>
+                <p><b>Weather API</b> : API for fetching real-time weather data and displaying it on the website.</p>
+                      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- --------------------------------------------------- Modal FINDCODER -------------------------------------------------->
+<div class="modal fade" id="exampleModalPf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">FindCoder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/projectsPics/emplvue.png" alt="Find Coder Full Screen" style="width: 100%;" />
+        <b>Présentation du projet :</b> <br>
+        FindCoder, une plateforme dédiée à la mise en relation entre les employeurs et les développeurs.
+        Les développeurs peuvent créer un profil complet, ajoutant
+         leurs compétences, CV, LinkedIn, GitHub et portfolio.
+          Les employeurs peuvent parcourir ces profils, 
+           rechercher des talents et communiquer via un système de messagerie intégré.
+       L'objectif est de simplifier le processus de recrutement pour les développeurs
+        en facilitant la découverte des talents et en établissant des connexions directes.
+        <h3 class="outils">Outils</h3>
+        <p><b>Backend</b>: Laravel (PHP) with API integration.</p>
+        <p><b>Frontend</b>: Vue.js 3 for dynamic user interfaces.</p>
+        <p><b>Database</b>: MySQL for storing user data and posts.</p>
+        <p><b>Authentication</b>: Laravel Sanctum for secure user authentication.</p>
+        <p><b>Real-time Communication</b>: Pusher for real-time chat between users.</p>
+        <p><b>Version Control</b>: GitHub for code management and collaboration.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- --------------------------------------------------- Modal ART PORTFOLIO -------------------------------------------------->
+<div class="modal fade" id="exampleModalArt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Art Portfolio</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/projectsPics/artport.png" alt="Art Portfolio Full Screen" style="width: 100%;" />
+        <b>Présentation du projet :</b> <br>
+        ArtPort est une plateforme en ligne permettant aux artistes de publier leurs œuvres. Les visiteurs peuvent les consulter et laisser des commentaires. L’application utilise Vue.js pour l'interface et Laravel pour la gestion du back-end.
+
+        <h3 class="outils">Outils</h3>
+        <p><b>Backend</b>: Laravel (PHP) for server-side development and API integration.</p>
+        <p><b>Frontend</b>: Vue.js 3 for dynamic and responsive user interfaces.</p>
+        <p><b>Development Environment</b>: XAMPP for local server setup.</p>
+        <p><b>Database</b>: MySQL for storing user data and application content.</p>
+        <p><b>Authentication</b>: Breeze API for handling user authentication and registration.</p>
+        <p><b>Version Control</b>: GitHub for code management and collaboration.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-info">
+    <p><i class="fa fa-phone"></i> <b>Phone:</b>  +212 6 12 18 26 42</p>
+    <p><i class="fa fa-envelope"></i> <b>Email:</b> bendoumaaziza3@gmail.com</p>
+    <p><i class="fab fa-linkedin"></i> <b>LinkedIn:</b> <a href="https://linkedin.com/in/aziza-bendouma-27b80b254" target="_blank">Your LinkedIn</a></p>
+    <p><i class="fab fa-github"></i> <b>GitHub:</b> <a href="https://github.com/1808ba" target="_blank">Your GitHub</a></p>
+  </div>
+</section>
+
+
+
+  
+   <script>
+      function opentab(tabId) {
+        const tabs = document.querySelectorAll('.tab-contents');
+        const links = document.querySelectorAll('.tab-links');
+  
+        tabs.forEach(tab => tab.classList.remove('active-tab'));
+        links.forEach(link => link.classList.remove('active-link'));
+  
+        document.getElementById(tabId).classList.add('active-tab');
+        event.target.classList.add('active-link');
+
+       
+      }
+      function closeNav() {
+          document.getElementById('check').checked = false;
+        }
+    </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       
-        <article>
-      
-          <div class="article-wrapper">
-            <figure>
-              <img src="" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>This is some title</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
-              
-              </a>
-            </div>
-          </div>
-        </article>
-      </section>
-   
-    
-    
-    
   </body>
 </html>
