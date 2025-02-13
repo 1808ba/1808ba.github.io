@@ -58,8 +58,91 @@
 }
 
 
-
+  .contact-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  
+  .contact-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #6a834e;
+  }
+  
+  .contact-info {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-item i {
+    font-size: 1.5rem;
+    color: #6a834e;
+    margin-right: 1rem;
+    width: 30px;
+    text-align: center;
+  }
+  
+  .contact-item .label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-right: 0.5rem;
+  }
+  
+  .contact-item a {
+    color: #6a834e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-item a:hover {
+    color: #6a834e;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section {
+      margin: 2rem auto;
+      padding: 2rem 1rem;
+    }
+    
+    .contact-item {
+      padding: 0.8rem;
+    }
+  }
   </style>
+
+
   <body>
     <nav>
       <div class="nav__content">
@@ -98,7 +181,7 @@
             </button>          </div>
         </div>
         <div class="image">
-          <img src="assets/profile2.jpg" alt="profile" />
+          <img src="assets/pic.jpg" alt="profile" />
         </div>
       </div>
     </section>
@@ -128,8 +211,7 @@
   </div>
   <div class="tab-contents" id="skills">
     <ul>
-         <li><span>Langages de Programmation :</span> HTML, CSS, JavaScript, PHP.</li>
-
+      <li><span>Langages de Programmation :</span> HTML, CSS, JavaScript, PHP.</li>
       <li><span>Frameworks :</span> Laravel, Vue.js, Bootstrap, Tailwind.</li>
       <li><span>Conception :</span> Merise, UML.</li>
       <li><span>Base de Données :</span> MySQL, PostgreSQL.</li>
@@ -327,15 +409,36 @@
   </div>
 </div>
 
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-info">
-    <p><i class="fa fa-phone"></i> <b>Phone:</b>  +212 6 12 18 26 42</p>
-    <p><i class="fa fa-envelope"></i> <b>Email:</b> bendoumaaziza3@gmail.com</p>
-    <p><i class="fab fa-linkedin"></i> <b>LinkedIn:</b> <a href="https://linkedin.com/in/aziza-bendouma-27b80b254" target="_blank">Your LinkedIn</a></p>
-    <p><i class="fab fa-github"></i> <b>GitHub:</b> <a href="https://github.com/1808ba" target="_blank">Your GitHub</a></p>
-  </div>
-</section>
+
+  
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fa fa-phone"></i>
+        <span class="label">Phone:</span>
+        <span>+212 6 12 18 26 42</span>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fa fa-envelope"></i>
+        <span class="label">Email:</span>
+        <span>bendoumaaziza3@gmail.com</span>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <span class="label">LinkedIn:</span>
+        <a href="https://linkedin.com/in/aziza-bendouma-27b80b254" target="_blank">Aziza Bendouma</a>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <span class="label">GitHub:</span>
+        <a href="https://github.com/1808ba" target="_blank">1808ba</a>
+      </div>
+    </div>
+  </section>
 
 
 
